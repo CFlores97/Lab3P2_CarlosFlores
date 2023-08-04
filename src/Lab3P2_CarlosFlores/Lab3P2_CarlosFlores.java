@@ -105,8 +105,14 @@ public class Lab3P2_CarlosFlores {
         System.out.println("Ingrese el numero de placa: ");
         String numPlaca = sc.next();
 
-        while (numPlaca.charAt(0) != 'H' && numPlaca.charAt(0) != 'B' && numPlaca.charAt(0) != 'b' && numPlaca.charAt(0) != 'h') {
+        while (numPlaca.length() < 1 && numPlaca.length() > 5) {
             System.out.println(" El numero de la placa debe ser de 3 a 4 caracteres y el numero de tiene que empezar con b o h");
+            System.out.println("Ingrese el numero de placa: ");
+            numPlaca = sc.next();
+        }
+
+        while (numPlaca.charAt(0) != 'H' && numPlaca.charAt(0) != 'h') {
+            System.out.println(" El numero de la placa de un automovil o bus empieza con h y debe ser de 3 a 4 caracteres y el numero de tiene que empezar con b o h");
             System.out.println("Ingrese el numero de placa: ");
             numPlaca = sc.next();
         }
@@ -140,8 +146,14 @@ public class Lab3P2_CarlosFlores {
         System.out.println("Ingrese el numero de placa: ");
         String numPlaca = sc.next();
 
-        while (numPlaca.charAt(0) != 'H' && numPlaca.charAt(0) != 'B' && numPlaca.charAt(0) != 'b' && numPlaca.charAt(0) != 'h') {
+        while (numPlaca.length() < 1 && numPlaca.length() > 5) {
             System.out.println(" El numero de la placa debe ser de 3 a 4 caracteres y el numero de tiene que empezar con b o h");
+            System.out.println("Ingrese el numero de placa: ");
+            numPlaca = sc.next();
+        }
+
+        while (numPlaca.charAt(0) != 'B' && numPlaca.charAt(0) != 'b') {
+            System.out.println(" El numero de la placa de una moto empieza con b y debe ser de 3 a 4 caracteres y el numero de tiene que empezar con b o h");
             System.out.println("Ingrese el numero de placa: ");
             numPlaca = sc.next();
         }
@@ -174,8 +186,14 @@ public class Lab3P2_CarlosFlores {
         System.out.println("Ingrese el numero de placa: ");
         String numPlaca = sc.next();
 
-        while (numPlaca.charAt(0) != 'H' && numPlaca.charAt(0) != 'B' && numPlaca.charAt(0) != 'b' && numPlaca.charAt(0) != 'h') {
+        while (numPlaca.length() < 1 && numPlaca.length() > 5) {
             System.out.println(" El numero de la placa debe ser de 3 a 4 caracteres y el numero de tiene que empezar con b o h");
+            System.out.println("Ingrese el numero de placa: ");
+            numPlaca = sc.next();
+        }
+
+        while (numPlaca.charAt(0) != 'H' && numPlaca.charAt(0) != 'h') {
+            System.out.println(" El numero de la placa de un automovil o bus empieza con h y debe ser de 3 a 4 caracteres y el numero de tiene que empezar con b o h");
             System.out.println("Ingrese el numero de placa: ");
             numPlaca = sc.next();
         }
