@@ -536,29 +536,60 @@ public class Lab3P2_CarlosFlores {
                 throw new AssertionError();
         }
     }
-    
-    static void bolesta(){
+
+    static void bolesta() {
         System.out.println("Seleccione que tipo de vehiculo desea crear una bolesta\n\n1. Automoviles\n2. Motos\3. Autobuses\n4. Regresar");
-        
+
         int opBol = sc.nextInt();
-        
+
         switch (opBol) {
             case 1:
-                System.out.println("Seleccione el vehiculo para generar bolesta");
+                System.out.println("Seleccione el vehiculo para generar boleta\n");
                 mostrar(1);
-                
+                int vehiEledigo = sc.nextInt();
+
+                int valorPagar = 275 + 250 + 1200;
+
+                System.out.println("--- Boleta de Revision Vehicular ---\n");
+
+                System.out.println(((Automovil) vehiculos.get(vehiEledigo)));
+
+                System.out.println("\n El valor a pagar es: " + valorPagar);
+
                 break;
             case 2:
-                System.out.println("Seleccione el vehiculo para generar bolesta");
+                System.out.println("Seleccione el vehiculo para generar boleta\n");
                 mostrar(2);
-                
+
+                int vehiEledigo2 = sc.nextInt();
+
+                int valorPagar2 = 275 + 250 + 200;
+
+                System.out.println("--- Boleta de Revision Vehicular ---\n");
+
+                System.out.println(((Automovil) vehiculos.get(vehiEledigo2)));
+
+                System.out.println("\n El valor a pagar es: " + valorPagar2);
+
                 break;
+
             case 3:
-                System.out.println("Seleccione el vehiculo para generar bolesta");
+                System.out.println("Seleccione el vehiculo para generar boleta\n");
                 mostrar(3);
-                
-                
+
+                int vehiEledigo3 = sc.nextInt();
+
+                int valorPagar3 = 275 + 250 + 1000;
+
+                System.out.println("--- Boleta de Revision Vehicular ---\n");
+
+                System.out.println(((Automovil) vehiculos.get(vehiEledigo3)));
+
+                System.out.println("\n El valor a pagar es: " + valorPagar3);
+
                 break;
+
+
             default:
                 throw new AssertionError();
         }
