@@ -65,6 +65,12 @@ public class Lab3P2_CarlosFlores {
     static void addAutomovil() {
         System.out.println("Ingrese el tipo de combustible: ");
         String comb = sc.next();
+        
+        
+        
+        
+        
+        
         System.out.println("Ingrese el tipo de transmision: ");
         String trans = sc.next();
         System.out.println("Ingrese el numero de puertas: ");

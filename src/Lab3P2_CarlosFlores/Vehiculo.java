@@ -79,6 +79,7 @@ public class Vehiculo {
 
     @Override
     public String toString() {
+        super.toString();
         return "Vehiculo{" + "numPlaca=" + numPlaca + ", marca=" + marca + ", modelo=" + modelo + ", tipo=" + tipo + ", color=" + color + ", year=" + year + '}';
     }
     

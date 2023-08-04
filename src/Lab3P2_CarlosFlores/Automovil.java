@@ -60,6 +60,7 @@ public class Automovil extends Vehiculo {
     
     @Override
     public void validar(){
+        super.toString();
         System.out.println("validado");
     }
     

@@ -45,6 +45,7 @@ public class Moto extends Vehiculo{
 
     @Override
     public String toString() {
+        super.toString();
         return "Moto{" + "velMaxima=" + velMaxima + ", peso=" + peso + ", consComb=" + consComb + '}';
     }
     

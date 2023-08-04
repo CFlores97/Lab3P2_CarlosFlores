@@ -46,6 +46,7 @@ public class Autobus extends Vehiculo {
 
     @Override
     public String toString() {
+        super.toString();
         return "Autobus{" + "capPasajeros=" + capPasajeros + ", numEjes=" + numEjes + ", longitud=" + longitud + '}';
     }
     
