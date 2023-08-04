@@ -31,10 +31,13 @@ public class Lab3P2_CarlosFlores {
             int op = sc.nextInt();
 
             switch (op) {
-                case 1 -> addAutomovil();
-                case 2 -> addMoto();
+                case 1 ->
+                    addAutomovil();
+                case 2 ->
+                    addMoto();
 
-                case 3 -> addBus();
+                case 3 ->
+                    addBus();
 
                 case 4 -> {
                 }
@@ -45,19 +48,25 @@ public class Lab3P2_CarlosFlores {
                 case 6 -> {
                     System.out.println("Ingrese los vehiculos que quiere mostrar:\n\n1. Automoviles\n2. Motos\n3. Autobus\n4. Mostrar todo\n5. Salir");
                     int opcion = sc.nextInt();
-                    
+
                     switch (opcion) {
-                        case 1 -> mostrar(1);
-                        case 2 -> mostrar(2);
-                        case 3 -> mostrar(3);
-                        case 4 -> System.out.println(vehiculos);
-                        default -> System.out.println("Opcion fuera de rango");
+                        case 1 ->
+                            mostrar(1);
+                        case 2 ->
+                            mostrar(2);
+                        case 3 ->
+                            mostrar(3);
+                        case 4 ->
+                            System.out.println(vehiculos);
+                        default ->
+                            System.out.println("Opcion fuera de rango");
                     }
                 }
 
                 case 7 -> {
                 }
-                case 8 -> running = false;
+                case 8 ->
+                    running = false;
 
                 default -> {
                 }
@@ -78,7 +87,7 @@ public class Lab3P2_CarlosFlores {
         System.out.println("Ingrese el numero de placa: ");
         String numPlaca = sc.next();
 
-        while (numPlaca.length() > 4 || numPlaca.length() <= 1 && numPlaca.charAt(0) != 'H' && numPlaca.charAt(0) != 'B' && numPlaca.charAt(0) != 'b' && numPlaca.charAt(0) != 'h') {
+        while (numPlaca.charAt(0) != 'H' && numPlaca.charAt(0) != 'B' && numPlaca.charAt(0) != 'b' && numPlaca.charAt(0) != 'h') {
             System.out.println(" El numero de la placa debe ser de 3 a 4 caracteres y el numero de tiene que empezar con b o h");
             System.out.println("Ingrese el numero de placa: ");
             numPlaca = sc.next();
@@ -113,7 +122,7 @@ public class Lab3P2_CarlosFlores {
         System.out.println("Ingrese el numero de placa: ");
         String numPlaca = sc.next();
 
-        while (numPlaca.length() > 4 || numPlaca.length() <= 1 && numPlaca.charAt(0) != 'H' && numPlaca.charAt(0) != 'B' && numPlaca.charAt(0) != 'b' && numPlaca.charAt(0) != 'h') {
+        while (numPlaca.charAt(0) != 'H' && numPlaca.charAt(0) != 'B' && numPlaca.charAt(0) != 'b' && numPlaca.charAt(0) != 'h') {
             System.out.println(" El numero de la placa debe ser de 3 a 4 caracteres y el numero de tiene que empezar con b o h");
             System.out.println("Ingrese el numero de placa: ");
             numPlaca = sc.next();
@@ -147,7 +156,7 @@ public class Lab3P2_CarlosFlores {
         System.out.println("Ingrese el numero de placa: ");
         String numPlaca = sc.next();
 
-        while (numPlaca.length() > 4 || numPlaca.length() <= 1 && numPlaca.charAt(0) != 'H' && numPlaca.charAt(0) != 'B' && numPlaca.charAt(0) != 'b' && numPlaca.charAt(0) != 'h') {
+        while (numPlaca.charAt(0) != 'H' && numPlaca.charAt(0) != 'B' && numPlaca.charAt(0) != 'b' && numPlaca.charAt(0) != 'h') {
             System.out.println(" El numero de la placa debe ser de 3 a 4 caracteres y el numero de tiene que empezar con b o h");
             System.out.println("Ingrese el numero de placa: ");
             numPlaca = sc.next();
@@ -169,35 +178,70 @@ public class Lab3P2_CarlosFlores {
 
         System.out.println("Se ha agregado la moto exitosamente");
     }
-    
-    static void eliminar(){
-        System.out.println("Ingrese los vehiculos que quiere mostrar:\n\n1. Automoviles\n2. Motos\n3. Autobus\n4. Salir");
+
+    static void eliminar() {
+
+        System.out.println("Ingrese los vehiculos que quiere eliminar:\n\n1. Automoviles\n2. Motos\n3. Autobus\n4. Salir");
         int opcionElegida = sc.nextInt();
-        
+
         switch (opcionElegida) {
-            case 1:
+            case 1 -> {
+
                 mostrar(1);
-                
+
                 int opElim = sc.nextInt();
-                
-                vehiculos.remove(opElim);
-                break;
-            case 2:
+
+                System.out.println("Seguro que desea eliminar el vehiculo?\n\n1. Si\n2. No");
+                int answ = sc.nextInt();
+
+                switch (answ) {
+                    case 1:
+                        vehiculos.remove(opElim);
+                        System.out.println("Eliminado!");
+                        break;
+                    default:
+                        throw new AssertionError();
+                }
+
+            }
+            case 2 -> {
                 mostrar(2);
-                
+
                 int opElim2 = sc.nextInt();
-                
-                vehiculos.remove(opElim2);
-                break;
-            case 3:
+
+                System.out.println("Seguro que desea eliminar el vehiculo?\n\n1. Si\n2. No");
+                int answ = sc.nextInt();
+
+                switch (answ) {
+                    case 1:
+                        vehiculos.remove(opElim2);
+                        System.out.println("Eliminado!");
+                        break;
+                    default:
+                        throw new AssertionError();
+                }
+
+            }
+            case 3 -> {
                 mostrar(3);
-                
+
                 int opElim3 = sc.nextInt();
-                
-                vehiculos.remove(opElim3);
-                
-                break;
-            default:
+
+                System.out.println("Seguro que desea eliminar el vehiculo?\n\n1. Si\n2. No");
+                int answ = sc.nextInt();
+
+                switch (answ) {
+                    case 1:
+                        vehiculos.remove(opElim3);
+                        System.out.println("Eliminado!");
+
+                        break;
+                    default:
+                        throw new AssertionError();
+                }
+
+            }
+            default ->
                 throw new AssertionError();
         }
     }
@@ -208,7 +252,7 @@ public class Lab3P2_CarlosFlores {
             case 1:
                 for (Vehiculo vehiculo : vehiculos) {
                     if (vehiculo instanceof Automovil) {
-                        System.out.println(vehiculo);
+                        System.out.println(vehiculos.indexOf(vehiculo) + " - " + vehiculo);
                     }
                 }
                 break;
@@ -217,7 +261,7 @@ public class Lab3P2_CarlosFlores {
 
                 for (Vehiculo vehiculo : vehiculos) {
                     if (vehiculo instanceof Moto) {
-                        System.out.println(vehiculo);
+                        System.out.println(vehiculos.indexOf(vehiculo) + " - " + vehiculo);
                     }
                 }
                 break;
@@ -225,13 +269,162 @@ public class Lab3P2_CarlosFlores {
             case 3:
                 for (Vehiculo vehiculo : vehiculos) {
                     if (vehiculo instanceof Autobus) {
-                        System.out.println(vehiculo);
+                        System.out.println(vehiculos.indexOf(vehiculo) + " - " + vehiculo);
                     }
                 }
                 break;
         }
         for (Vehiculo vehiculo : vehiculos) {
 
+        }
+    }
+
+    static void modificar() throws ParseException {
+        System.out.println("Ingrese los vehiculos que quiere modificar:\n\n1. Automoviles\n2. Motos\n3. Autobus\n4. Salir");
+        int opcionElegida = sc.nextInt();
+
+        switch (opcionElegida) {
+            case 1 -> {
+
+                mostrar(1);
+
+                System.out.println("\nIngrese el vehiculo a modidificar: ");
+
+                int opElim = sc.nextInt();
+
+                System.out.println("Que elemento del automovil desea modificar?: 1. Tipo combustible\n2. Tipo de transmision \n3. Numero de puertas\n4. Numero de asientos\n5. Numero de placa\n6. Marca \n7. Modelo\n8. Tipo \n9. Color\n10. Año");
+
+                int elemModif = sc.nextInt();
+
+                switch (elemModif) {
+                    case 1:
+                        System.out.println("Ingrese el tipo de combustible: ");
+                        String comb = sc.next();
+
+                        ((Automovil) vehiculos.get(opElim)).setTipoCobustible(comb);
+                        break;
+                    case 2:
+                        System.out.println("Ingrese el tipo de transmision: ");
+                        String trans = sc.next();
+
+                        ((Automovil) vehiculos.get(opElim)).setTipoTransmision(trans);
+                        break;
+                    case 3:
+                        System.out.println("Ingrese el numero de puertas: ");
+                        int numPuertas = sc.nextInt();
+
+                        ((Automovil) vehiculos.get(opElim)).setNumPuertas(numPuertas);
+
+                        break;
+                    case 4:
+
+                        System.out.println("Ingrese el numero de asientos: ");
+                        int numAsientos = sc.nextInt();
+
+                        ((Automovil) vehiculos.get(opElim)).setNumAsientos(numAsientos);
+                        break;
+                    case 5:
+
+                        System.out.println("Ingrese el numero de placa: ");
+                        String numPlaca = sc.next();
+
+                        ((Automovil) vehiculos.get(opElim)).setNumPlaca(numPlaca);
+                        break;
+                    case 6:
+
+                        System.out.println("Ingrese la marca: ");
+                        String marca = sc.next();
+
+                        ((Automovil) vehiculos.get(opElim)).setMarca(marca);
+
+                        break;
+                    case 7:
+
+                        System.out.println("Ingrese el modelo: ");
+                        String modelo = sc.next();
+
+                        ((Automovil) vehiculos.get(opElim)).setModelo(modelo);
+                        break;
+                    case 8:
+
+                        System.out.println("Ingrese el tipo de auto: ");
+                        String tipo = sc.next();
+
+                        ((Automovil) vehiculos.get(opElim)).setTipo(tipo);
+                        break;
+                    case 9:
+                        Color color = JColorChooser.showDialog(null, "Ingrese color", Color.yellow);
+                        ((Automovil) vehiculos.get(opElim)).setColor(color);
+                        break;
+                    case 10:
+
+                        DateFormat df = new SimpleDateFormat("yyyy");
+                        System.out.println("Ingrese el año: ");
+                        String year = sc.next();
+                        Date fecha = df.parse(year);
+                        
+                        ((Automovil) vehiculos.get(opElim)).setYear(fecha);
+                        break;
+                    default:
+                        throw new AssertionError();
+                }
+
+                System.out.println("Seguro que desea eliminar el vehiculo?\n\n1. Si\n2. No");
+                int answ = sc.nextInt();
+
+                switch (answ) {
+                    case 1:
+                        vehiculos.remove(opElim);
+                        System.out.println("Eliminado!");
+                        break;
+                    default:
+                        throw new AssertionError();
+                }
+
+            }
+            case 2 -> {
+                mostrar(2);
+                System.out.println("\nIngrese el vehiculo a modidificar: ");
+
+                int opElim2 = sc.nextInt();
+
+                System.out.println("Seguro que desea eliminar el vehiculo?\n\n1. Si\n2. No");
+                int answ = sc.nextInt();
+
+                switch (answ) {
+                    case 1:
+                        vehiculos.remove(opElim2);
+                        System.out.println("Eliminado!");
+                        break;
+                    default:
+                        throw new AssertionError();
+                }
+
+            }
+            case 3 -> {
+
+                mostrar(3);
+
+                System.out.println("\nIngrese el vehiculo a modidificar: ");
+
+                int opElim3 = sc.nextInt();
+
+                System.out.println("Seguro que desea eliminar el vehiculo?\n\n1. Si\n2. No");
+                int answ = sc.nextInt();
+
+                switch (answ) {
+                    case 1:
+                        vehiculos.remove(opElim3);
+                        System.out.println("Eliminado!");
+
+                        break;
+                    default:
+                        throw new AssertionError();
+                }
+
+            }
+            default ->
+                throw new AssertionError();
         }
     }
 
