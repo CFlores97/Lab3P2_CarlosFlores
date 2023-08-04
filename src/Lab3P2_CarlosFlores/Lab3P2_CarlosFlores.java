@@ -40,13 +40,25 @@ public class Lab3P2_CarlosFlores {
                     addBus();
 
                 case 4 -> {
+                    if (vehiculos.isEmpty()) {
+                        System.out.println("No hay vehiculos");
+                        break;
+                    }
                     modificar();
                 }
 
                 case 5 -> {
+                    if (vehiculos.isEmpty()) {
+                        System.out.println("No hay vehiculos");
+                        break;
+                    }
                     eliminar();
                 }
                 case 6 -> {
+                    if (vehiculos.isEmpty()) {
+                        System.out.println("No hay vehiculos");
+                        break;
+                    }
                     System.out.println("Ingrese los vehiculos que quiere mostrar:\n\n1. Automoviles\n2. Motos\n3. Autobus\n4. Mostrar todo\n5. Salir");
                     int opcion = sc.nextInt();
 
@@ -65,6 +77,11 @@ public class Lab3P2_CarlosFlores {
                 }
 
                 case 7 -> {
+                    if (vehiculos.isEmpty()) {
+                        System.out.println("No hay vehiculos");
+                        break;
+                    }
+                    boleta();
                 }
                 case 8 ->
                     running = false;
@@ -537,8 +554,8 @@ public class Lab3P2_CarlosFlores {
         }
     }
 
-    static void bolesta() {
-        System.out.println("Seleccione que tipo de vehiculo desea crear una bolesta\n\n1. Automoviles\n2. Motos\3. Autobuses\n4. Regresar");
+    static void boleta() {
+        System.out.println("Seleccione que tipo de vehiculo desea crear una bolesta\n\n1. Automoviles\n2. Motos\n3. Autobuses\n4. Regresar");
 
         int opBol = sc.nextInt();
 
@@ -588,7 +605,6 @@ public class Lab3P2_CarlosFlores {
                 System.out.println("\n El valor a pagar es: " + valorPagar3);
 
                 break;
-
 
             default:
                 throw new AssertionError();
