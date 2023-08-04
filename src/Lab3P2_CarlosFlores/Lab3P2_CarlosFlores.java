@@ -40,6 +40,7 @@ public class Lab3P2_CarlosFlores {
                     addBus();
 
                 case 4 -> {
+                    modificar();
                 }
 
                 case 5 -> {
@@ -362,20 +363,8 @@ public class Lab3P2_CarlosFlores {
                         System.out.println("Ingrese el año: ");
                         String year = sc.next();
                         Date fecha = df.parse(year);
-                        
+
                         ((Automovil) vehiculos.get(opElim)).setYear(fecha);
-                        break;
-                    default:
-                        throw new AssertionError();
-                }
-
-                System.out.println("Seguro que desea eliminar el vehiculo?\n\n1. Si\n2. No");
-                int answ = sc.nextInt();
-
-                switch (answ) {
-                    case 1:
-                        vehiculos.remove(opElim);
-                        System.out.println("Eliminado!");
                         break;
                     default:
                         throw new AssertionError();
@@ -388,13 +377,72 @@ public class Lab3P2_CarlosFlores {
 
                 int opElim2 = sc.nextInt();
 
-                System.out.println("Seguro que desea eliminar el vehiculo?\n\n1. Si\n2. No");
-                int answ = sc.nextInt();
+                System.out.println("Que elemento del automovil desea modificar?: 1. Velocidad maxima\n2. Peso\n3. Consumo de combustible\n4. Numero de placa\n5. Marca \n6. Modelo\n7. Tipo \n8. Color\n9. Año");
 
-                switch (answ) {
+                int elemModif = sc.nextInt();
+
+                switch (elemModif) {
                     case 1:
-                        vehiculos.remove(opElim2);
-                        System.out.println("Eliminado!");
+
+                        System.out.println("Ingrese la velocidad maxima: ");
+                        double vel = sc.nextDouble();
+
+                        ((Moto) vehiculos.get(opElim2)).setVelMaxima(vel);
+                        break;
+                    case 2:
+                        System.out.println("Ingrese el peso de la moto: ");
+                        double peso = sc.nextDouble();
+
+                        ((Moto) vehiculos.get(opElim2)).setPeso(peso);
+                        break;
+                    case 3:
+                        System.out.println("Ingrese el consumo de combustible: ");
+                        double consComb = sc.nextDouble();
+
+                        ((Moto) vehiculos.get(opElim2)).setConsComb(consComb);
+                        break;
+
+                    case 4:
+
+                        System.out.println("Ingrese el numero de placa: ");
+                        String numPlaca = sc.next();
+
+                        ((Moto) vehiculos.get(opElim2)).setNumPlaca(numPlaca);
+                        break;
+                    case 5:
+
+                        System.out.println("Ingrese la marca: ");
+                        String marca = sc.next();
+
+                        ((Moto) vehiculos.get(opElim2)).setMarca(marca);
+
+                        break;
+                    case 6:
+
+                        System.out.println("Ingrese el modelo: ");
+                        String modelo = sc.next();
+
+                        ((Moto) vehiculos.get(opElim2)).setModelo(modelo);
+                        break;
+                    case 7:
+
+                        System.out.println("Ingrese el tipo de auto: ");
+                        String tipo = sc.next();
+
+                        ((Moto) vehiculos.get(opElim2)).setTipo(tipo);
+                        break;
+                    case 8:
+                        Color color = JColorChooser.showDialog(null, "Ingrese color", Color.yellow);
+                        ((Moto) vehiculos.get(opElim2)).setColor(color);
+                        break;
+                    case 9:
+
+                        DateFormat df = new SimpleDateFormat("yyyy");
+                        System.out.println("Ingrese el año: ");
+                        String year = sc.next();
+                        Date fecha = df.parse(year);
+
+                        ((Moto) vehiculos.get(opElim2)).setYear(fecha);
                         break;
                     default:
                         throw new AssertionError();
@@ -409,14 +457,75 @@ public class Lab3P2_CarlosFlores {
 
                 int opElim3 = sc.nextInt();
 
-                System.out.println("Seguro que desea eliminar el vehiculo?\n\n1. Si\n2. No");
-                int answ = sc.nextInt();
+                System.out.println("Que elemento del automovil desea modificar?: 1. Velocidad maxima\n2. Peso\n3. Consumo de combustible\n4. Numero de placa\n5. Marca \n6. Modelo\n7. Tipo \n8. Color\n9. Año");
 
-                switch (answ) {
+                int elemModif = sc.nextInt();
+
+                switch (elemModif) {
                     case 1:
-                        vehiculos.remove(opElim3);
-                        System.out.println("Eliminado!");
 
+                        System.out.println("Ingrese la capacidad de pasajeros: ");
+                        int capPasa = sc.nextInt();
+
+                        ((Autobus) vehiculos.get(opElim3)).setCapPasajeros(capPasa);
+                        break;
+                    case 2:
+
+                        System.out.println("Ingrese el numero de ejes: ");
+                        int numEjes = sc.nextInt();
+
+                        ((Autobus) vehiculos.get(opElim3)).setNumEjes(numEjes);
+                        break;
+                    case 3:
+
+                        System.out.println("Ingrese la longitud: ");
+                        int longitud = sc.nextInt();
+
+                        ((Autobus) vehiculos.get(opElim3)).setLongitud(longitud);
+
+                        break;
+
+                    case 4:
+
+                        System.out.println("Ingrese el numero de placa: ");
+                        String numPlaca = sc.next();
+
+                        ((Autobus) vehiculos.get(opElim3)).setNumPlaca(numPlaca);
+                        break;
+                    case 5:
+
+                        System.out.println("Ingrese la marca: ");
+                        String marca = sc.next();
+
+                        ((Autobus) vehiculos.get(opElim3)).setMarca(marca);
+
+                        break;
+                    case 6:
+
+                        System.out.println("Ingrese el modelo: ");
+                        String modelo = sc.next();
+
+                        ((Autobus) vehiculos.get(opElim3)).setModelo(modelo);
+                        break;
+                    case 7:
+
+                        System.out.println("Ingrese el tipo de auto: ");
+                        String tipo = sc.next();
+
+                        ((Autobus) vehiculos.get(opElim3)).setTipo(tipo);
+                        break;
+                    case 8:
+                        Color color = JColorChooser.showDialog(null, "Ingrese color", Color.yellow);
+                        ((Autobus) vehiculos.get(opElim3)).setColor(color);
+                        break;
+                    case 9:
+
+                        DateFormat df = new SimpleDateFormat("yyyy");
+                        System.out.println("Ingrese el año: ");
+                        String year = sc.next();
+                        Date fecha = df.parse(year);
+
+                        ((Autobus) vehiculos.get(opElim3)).setYear(fecha);
                         break;
                     default:
                         throw new AssertionError();
@@ -424,6 +533,33 @@ public class Lab3P2_CarlosFlores {
 
             }
             default ->
+                throw new AssertionError();
+        }
+    }
+    
+    static void bolesta(){
+        System.out.println("Seleccione que tipo de vehiculo desea crear una bolesta\n\n1. Automoviles\n2. Motos\3. Autobuses\n4. Regresar");
+        
+        int opBol = sc.nextInt();
+        
+        switch (opBol) {
+            case 1:
+                System.out.println("Seleccione el vehiculo para generar bolesta");
+                mostrar(1);
+                
+                break;
+            case 2:
+                System.out.println("Seleccione el vehiculo para generar bolesta");
+                mostrar(2);
+                
+                break;
+            case 3:
+                System.out.println("Seleccione el vehiculo para generar bolesta");
+                mostrar(3);
+                
+                
+                break;
+            default:
                 throw new AssertionError();
         }
     }
