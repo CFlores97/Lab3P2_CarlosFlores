@@ -310,7 +310,7 @@ public class Lab3P2_CarlosFlores {
 
                 int opElim = sc.nextInt();
 
-                System.out.println("Que elemento del automovil desea modificar?: 1. Tipo combustible\n2. Tipo de transmision \n3. Numero de puertas\n4. Numero de asientos\n5. Numero de placa\n6. Marca \n7. Modelo\n8. Tipo \n9. Color\n10. Año");
+                System.out.println("Que elemento del automovil desea modificar?:\n1. Tipo combustible\n2. Tipo de transmision \n3. Numero de puertas\n4. Numero de asientos\n5. Numero de placa\n6. Marca \n7. Modelo\n8. Tipo \n9. Color\n10. Año");
 
                 int elemModif = sc.nextInt();
 
@@ -394,7 +394,7 @@ public class Lab3P2_CarlosFlores {
 
                 int opElim2 = sc.nextInt();
 
-                System.out.println("Que elemento del automovil desea modificar?: 1. Velocidad maxima\n2. Peso\n3. Consumo de combustible\n4. Numero de placa\n5. Marca \n6. Modelo\n7. Tipo \n8. Color\n9. Año");
+                System.out.println("Que elemento del automovil desea modificar?\n1. Velocidad maxima\n2. Peso\n3. Consumo de combustible\n4. Numero de placa\n5. Marca \n6. Modelo\n7. Tipo \n8. Color\n9. Año");
 
                 int elemModif = sc.nextInt();
 
@@ -474,7 +474,7 @@ public class Lab3P2_CarlosFlores {
 
                 int opElim3 = sc.nextInt();
 
-                System.out.println("Que elemento del automovil desea modificar?: 1. Velocidad maxima\n2. Peso\n3. Consumo de combustible\n4. Numero de placa\n5. Marca \n6. Modelo\n7. Tipo \n8. Color\n9. Año");
+                System.out.println("Que elemento del automovil desea modificar?\n1. Velocidad maxima\n2. Peso\n3. Consumo de combustible\n4. Numero de placa\n5. Marca \n6. Modelo\n7. Tipo \n8. Color\n9. Año");
 
                 int elemModif = sc.nextInt();
 
