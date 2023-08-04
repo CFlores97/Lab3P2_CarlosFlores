@@ -1,13 +1,56 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package Lab3P2_CarlosFlores;
 
-/**
- *
- * @author carlo
- */
-public class Autobus {
+import java.awt.Color;
+import java.util.Date;
+
+
+public class Autobus extends Vehiculo {
+    
+    private int capPasajeros, numEjes, longitud;
+
+    public Autobus() {
+        super();
+    }
+
+    public Autobus(int capPasajeros, int numEjes, int longitud, String numPlaca, String marca, String modelo, String tipo, Color color, Date year) {
+        super(numPlaca, marca, modelo, tipo, color, year);
+        this.capPasajeros = capPasajeros;
+        this.numEjes = numEjes;
+        this.longitud = longitud;
+    }
+
+    public int getCapPasajeros() {
+        return capPasajeros;
+    }
+
+    public void setCapPasajeros(int capPasajeros) {
+        this.capPasajeros = capPasajeros;
+    }
+
+    public int getNumEjes() {
+        return numEjes;
+    }
+
+    public void setNumEjes(int numEjes) {
+        this.numEjes = numEjes;
+    }
+
+    public int getLongitud() {
+        return longitud;
+    }
+
+    public void setLongitud(int longitud) {
+        this.longitud = longitud;
+    }
+
+    @Override
+    public String toString() {
+        return "Autobus{" + "capPasajeros=" + capPasajeros + ", numEjes=" + numEjes + ", longitud=" + longitud + '}';
+    }
+    
+    
+    
+    
     
 }
