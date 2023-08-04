@@ -15,13 +15,7 @@ public class Vehiculo {
 
     public Vehiculo(String numPlaca, String marca, String modelo, String tipo, Color color, Date year) {
         
-        if(numPlaca.length() > 4 || numPlaca.length() <= 1){
-            System.out.println("El numero de la placa debe ser de 3 a 4 caracteres");
-        }
-        else{
-            this.numPlaca = numPlaca;
-        }
-        
+        this.numPlaca = numPlaca;
         this.marca = marca;
         this.modelo = modelo;
         this.tipo = tipo;
