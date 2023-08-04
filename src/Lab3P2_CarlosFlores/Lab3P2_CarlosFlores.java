@@ -31,34 +31,36 @@ public class Lab3P2_CarlosFlores {
             int op = sc.nextInt();
 
             switch (op) {
-                case 1:
-                    addAutomovil();
-                    break;
-                case 2:
-                    addMoto();
-                    break;
+                case 1 -> addAutomovil();
+                case 2 -> addMoto();
 
-                case 3:
-                    break;
+                case 3 -> addBus();
 
-                case 4:
-                    break;
+                case 4 -> {
+                }
 
-                case 5:
+                case 5 -> {
+                    eliminar();
+                }
+                case 6 -> {
+                    System.out.println("Ingrese los vehiculos que quiere mostrar:\n\n1. Automoviles\n2. Motos\n3. Autobus\n4. Mostrar todo\n5. Salir");
+                    int opcion = sc.nextInt();
+                    
+                    switch (opcion) {
+                        case 1 -> mostrar(1);
+                        case 2 -> mostrar(2);
+                        case 3 -> mostrar(3);
+                        case 4 -> System.out.println(vehiculos);
+                        default -> System.out.println("Opcion fuera de rango");
+                    }
+                }
 
-                    break;
-                case 6:
+                case 7 -> {
+                }
+                case 8 -> running = false;
 
-                    break;
-                case 7:
-
-                    break;
-                case 8:
-                    running = false;
-                    break;
-
-                default:
-                    break;
+                default -> {
+                }
             }
 
         }
@@ -167,4 +169,70 @@ public class Lab3P2_CarlosFlores {
 
         System.out.println("Se ha agregado la moto exitosamente");
     }
+    
+    static void eliminar(){
+        System.out.println("Ingrese los vehiculos que quiere mostrar:\n\n1. Automoviles\n2. Motos\n3. Autobus\n4. Salir");
+        int opcionElegida = sc.nextInt();
+        
+        switch (opcionElegida) {
+            case 1:
+                mostrar(1);
+                
+                int opElim = sc.nextInt();
+                
+                vehiculos.remove(opElim);
+                break;
+            case 2:
+                mostrar(2);
+                
+                int opElim2 = sc.nextInt();
+                
+                vehiculos.remove(opElim2);
+                break;
+            case 3:
+                mostrar(3);
+                
+                int opElim3 = sc.nextInt();
+                
+                vehiculos.remove(opElim3);
+                
+                break;
+            default:
+                throw new AssertionError();
+        }
+    }
+
+    static void mostrar(int a) {
+
+        switch (a) {
+            case 1:
+                for (Vehiculo vehiculo : vehiculos) {
+                    if (vehiculo instanceof Automovil) {
+                        System.out.println(vehiculo);
+                    }
+                }
+                break;
+
+            case 2:
+
+                for (Vehiculo vehiculo : vehiculos) {
+                    if (vehiculo instanceof Moto) {
+                        System.out.println(vehiculo);
+                    }
+                }
+                break;
+
+            case 3:
+                for (Vehiculo vehiculo : vehiculos) {
+                    if (vehiculo instanceof Autobus) {
+                        System.out.println(vehiculo);
+                    }
+                }
+                break;
+        }
+        for (Vehiculo vehiculo : vehiculos) {
+
+        }
+    }
+
 }
